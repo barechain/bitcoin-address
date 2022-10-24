@@ -1,0 +1,15 @@
+version: '3.7'
+
+services:
+  bitcoin-address-app:
+    image: bitcoin-address-app
+    build:
+      context: ./
+      dockerfile: ./docker/Dockerfile
+      args:
+        - USER_ID
+        - GROUP_ID
+    container_name: bitcoin-address-app
+    restart: unless-stopped
+    volumes:
+      - ./:/srv/app

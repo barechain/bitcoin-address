@@ -1,0 +1,41 @@
+{
+    "name": "barechain/bitcoin-address",
+    "description": "A simple P2PK, P2PKH, P2SH, P2WPKH, P2WSH output script/address generator.",
+    "type": "library",
+    "keywords": [
+        "bitcoin",
+        "address",
+        "generator"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "inez4",
+            "email": "rremfi32@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=8.0",
+        "stephenhill/base58": "^1.1",
+        "bitwasp/bech32": "^0.0.1",
+        "btccom/cashaddress": "^0.0.3"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5.25"
+    },
+    "autoload": {
+        "psr-4": {
+            "Barechain\\BitcoinAddress\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Barechain\\BitcoinAddress\\Tests\\": "tests/"
+        }
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true
+    }
+}
